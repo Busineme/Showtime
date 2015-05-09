@@ -458,10 +458,326 @@ layout: false
 # Iteração 3
 
 ---
-
 .left-column[
-  ## EAP
-  ## Cronograma
+  ## Custos
+
+]
+.right-column[
+
+<br><br><br>
+<!-- Inserir Figura -->
+]
+
+---
+.left-column[
+  ## Custos
+
+]
+.right-column[
+
+<br><br><br>
+<!-- Inserir tabela de custos -->
+]
+
+---
+.left-column[
+  ## Custos
+
+]
+.right-column[
+
+<br><br><br>
+<!-- Inserir gráficos de custos -->
+]
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+  ### Todos
+
+]
+.right-column[
+
+<br><br><br>
+<!-- Inserir Figura -->
+]
+
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+  ### Implementados
+
+]
+.right-column[
+
+<br><br><br>
+<!-- Inserir Figura -->
+]
+
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+  ## Gerenciamento de Tempo
+
+]
+.right-column[
+
+<br><br><br>
+<!-- Inserir Figura -->
+]
+
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+
+]
+.right-column[
+
+# **CDU01** - Manter Usuários
+- **CDU01.1** - Cadastrar Usuário
+- **CDU01.2** - Alterar Usuário
+- **CDU01.3** - Excluir Usuário
+
+]
+
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+  ### **CDU01.1** - Cadastrar Usuário
+
+]
+.right-column[
+
+- O usuário se dirige à área de cadastro clicando no botão de cadastrar-se 
+- O usuário preenche os seguintes campos com seus dados pessoais.
+- O usuário submete o formulário de cadastro. 
+- O sistema verifica se nome de usuário ou email já foram utilizados. 
+- O sistema valida os dados apresentados. (Ver dicionário de dados) 
+- Usuário é persistido no base de dados. 
+- O sistema apresenta uma mensagem de cadastro bem sucedido. 
+- O sistema redireciona à página de login do aplicativo. 
+- O fluxo é encerrado.
+
+<!-- Inserir Figura -->
+
+
+]
+
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+  ### **CDU01.1** - Cadastrar Usuário
+
+]
+.right-column[
+## Fuxlos Alternativos
+
+- O usuário sai da página de cadastro e o cadastro não é efetuado.  <!-- Verde -->
+- O sistema rejeita os dados incorretos informados inicialmente.    <!-- Vermelhos -->
+- O sistema exibe uma mensagem informando que os dados informados são inválidos. 
+- Os campos onde existem erros de cadastro são destacados e exemplos corretos são exibidos. 
+- O fluxo retorna ao passo 2 do Fluxo Básico
+
+
+<!-- Inserir Figura -->
+
+
+]
+
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+  ### **CDU01.1** - Cadastrar Usuário
+
+]
+.right-column[
+## Fuxlos Alternativos
+
+- O sistema informa ao usuário que houve problema ao cadastrá-lo no banco de dados. <!-- Vermelhos -->
+- O sistema mostra uma mensagem informando o erro ocorrido. 
+- O sistema retorna ao passo 2 do Fluxo Básico.
+
+<!-- Inserir Figura -->
+
+
+]
+
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+  ### **CDU01.2** - Alterar Usuário
+
+]
+.right-column[
+
+- Usuário acessa a página de perfil da topbar
+- Usuário altera um ou mais dos campos disponíveis (Nome, Email)
+- Usuário submete suas alterações
+- O sistema verifica se o novo email já foi utilizado.
+- O sistema valida o email. (Verificar dicionário de dados)
+- Os novos dados do usuário são atualizados no sistema
+- O sistema apresenta uma mensagem de alteração bem sucedida.
+- O sistema redireciona à página principal do aplicativo.
+- O fluxo é encerrado.
+
+
+<!-- Inserir Figura -->
+
+
+]
+
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+  ### **CDU01.2** - Excluir Usuário
+
+]
+.right-column[
+
+
+<!-- Inserir Figura -->
+
+
+]
+
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+  ### **CDU01** - Manter Usuário
+  ### **CDU02** - Buscar Linhas
+
+]
+.right-column[
+
+# **CDU02** - Buscar Linhas
+
+- Usuário digita o numero da linha no campo de busca
+- Usuário submete o formulário
+- O sistema requere os dados da API.
+- O sistema constrói a pagina com os dados advindos.
+- O sistema mostra a pagina com as linhas que contenham o valor pesquisado
+
+<!-- Inserir Figura -->
+
+]
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+  ### **CDU01** - Manter Usuário
+  ### **CDU02** - Buscar Linhas
+
+]
+.right-column[
+## Fluxos Alternativos
+
+- Busca avançada  <!-- Vermelhos -->
+- No passo 1 o usuário seleciona busca avançada
+- Página de busca avançada é exibida
+- Usuário entra com um ou mais dos seguintes dados: número da linha, Via e Terminal
+- O sistema requere os dados da API.
+- A API retorna as linhas que contenham um ou mais dos dados pesquisados
+- O fluxo volta para o passo 4 do fluxo básico
+
+
+<!-- Inserir Figura -->
+
+]
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+  ## Caso de Teste
+
+]
+.right-column[
+## Exemplo
+
+### Cadastrar usuário com Username já existente 
+- Descrição: O usuário tenta inserir um Username já existente 
+- Pré Condição: 
+  - Não Estar cadastrado no sistema 
+  - Preencher o campo Username com um nome previamente cadastrado 
+- Pós Condição: 
+  - Não efetuação do cadastro Mensagem de alerta: “O nome de usuario escolhido ja esta em uso” 
+- Retorno à página de Cadastro Dados Necessários: 
+  - Username
+]
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+  ## Caso de Teste
+
+]
+.right-column[
+## Exemplo
+
+### Cadastrar usuário com Username já existente 
+
+<!-- Inserir Figura -->
+
+]
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+  ## Caso de Teste
+  ## Resultados
+
+]
+.right-column[
+<br>
+
+<!-- Inserir Figura -->
+
+]
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+  ## Caso de Teste
+  ## Resultados
+  ### Travis
+
+]
+.right-column[
+<br>
+
+<!-- Inserir Figura -->
+
+]
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+  ## Caso de Teste
+  ## Resultados
+  ### Cobertura
+
+]
+.right-column[
+<br>
+
+<!-- Inserir Figura -->
+
+]
+---
+.left-column[
+  ## Custos
+  ## Casos de Uso
+  ## Caso de Teste
+  ## Resultados
+  ## Planos Gerados
 
 ]
 .right-column[
@@ -477,57 +793,10 @@ layout: false
 - [Plano de Gerenciamento de Tempo](http://lappis.unb.br/redm/projects/grupo-2-busine-me/wiki/Plano_de_Gerenciamento_de_Tempo)
 
 ]
----
 
-name: last-page
-template: inverse
-
-## Arquitetura
 ---
 .left-column[
-  ## MVC
-]
-.right-column[
-
-<br><br><br>
-
-<img src="./visao-geral.png" style="width: 600px;">
-
-.footnote[Mais informações sobre o nosso [Documento de Arquitetura](http://lappis.unb.br/redm/projects/grupo-2-busine-me/wiki/Documento_de_Arquitetura)]
-
-]
----
-.left-column[
-  ## MVC
-  ## Caso de Uso
-]
-.right-column[
-
-<br><br><br>
-
-<img src="./CasosDeUsoArq.png" style="width: 600px;">
-
-.footnote[Mais informações sobre o nosso [Documento de Arquitetura](http://lappis.unb.br/redm/projects/grupo-2-busine-me/wiki/Documento_de_Arquitetura)]
-
-]
----
-.left-column[
-  ## MVC
-  ## Caso de Uso
-  ## Diagrama de Pacotes
-]
-.right-column[
-
-<br><br><br>
-
-<img src="./diagramaDePacotes.png" style="width: 600px;">
-
-.footnote[Mais informações sobre o nosso [Documento de Arquitetura](http://lappis.unb.br/redm/projects/grupo-2-busine-me/wiki/Documento_de_Arquitetura)]
-
-]
----
-.left-column[
-  ## Gource
+  ## That's all folks (for now)!
 ]
 .right-column[
 
@@ -545,7 +814,7 @@ template: inverse
 name: last-page
 template: inverse
 
-## That's all folks (for now)!
+## Perguntas?
 
     </textarea>
     <script type="text/javascript">
