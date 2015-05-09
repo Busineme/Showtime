@@ -3,22 +3,23 @@
   <head>
     <title>Busine.me</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href='http://fonts.googleapis.com/css?family=Lobster|Yanone+Kaffeesatz:400,700,300,200|Droid+Serif:400,700italic,700,400italic|Roboto' rel='stylesheet' type='text/css'>
     <style type="text/css">
-      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      /*@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
       @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
+*/
       body {
-        font-family: 'Droid Serif';
+        font-family: 'Roboto';
       }
       h1, h2, h3 {
-        font-family: 'Yanone Kaffeesatz';
-        font-weight: 400;
+        font-family: 'Lobster';
+        font-weight: 200;
         margin-bottom: 0;
       }
       .remark-slide-content h1 { font-size: 3em; }
-      .remark-slide-content h2 { font-size: 2em; }
-      .remark-slide-content h3 { font-size: 1.6em; }
+      .remark-slide-content h2 { font-size: 1.6em; }
+      .remark-slide-content h3 { font-size: 1.1em; }
       .footnote {
         position: absolute;
         bottom: 3em;
@@ -57,12 +58,12 @@
         padding: 15px;
       }
       .inverse {
-        background: #272822;
-        color: #777872;
-        text-shadow: 0 0 20px #333;
+        background: #94846e;
+        color: #edede4;
+        /*text-shadow: 0 0 20px #edede4;*/
       }
       .inverse h1, .inverse h2 {
-        color: #f3f3f3;
+        color: #80d5df;
         line-height: 0.8em;
       }
 
@@ -103,7 +104,7 @@
 
       /* Two-column layout */
       .left-column {
-        color: #777;
+        color: #94846e;
         width: 20%;
         height: 92%;
         float: left;
@@ -126,6 +127,7 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
+<img src="./busineme-logo.png" style="width: 20%;">
 #Busine.me
 MDS/GPP
 ---
@@ -138,7 +140,7 @@ layout: false
 .left-column[
   ## Partes Interessadas
 ]
-.right-column[ 
+.right-column[
 
 <!-- Colocar foto -->
 
@@ -149,7 +151,7 @@ layout: false
   ## Partes Interessadas
   ## Comunicação
 ]
-.right-column[ 
+.right-column[
 
 <!-- Colar Foto -->
 ]
@@ -160,7 +162,7 @@ layout: false
   ## Comunicação
   ## Wiki
 ]
-.right-column[ 
+.right-column[
 
 <!-- Colar Foto -->
 ]
@@ -169,14 +171,14 @@ layout: false
 template: inverse
 layout: false
 
-## Visão
+# Visão
 
 ---
 layout: false
 .left-column[
   ## O que é?
 ]
-.right-column[ 
+.right-column[
 
 - É *open-source*
 - É uma aplicação web
@@ -188,7 +190,7 @@ layout: false
   ## O que é?
   ## Descrição do Problema
 ]
-.right-column[ 
+.right-column[
 
 - **Problema de** imprecisão nos horários de saída e chegada de onibus disponibilizados pelos dados abertos.
 - **Afeta** usuários de transporte público
@@ -202,13 +204,13 @@ layout: false
   ## Descrição do Problema
   ## Sentença de Posição do Produto
 ]
-.right-column[ 
+.right-column[
 
-- **Para** Usuários de transporte público. 
-- **que** Queiram pegar um ônibus em uma parada ou terminal. 
-- **O** Webapp Busine.me 
-- **que** De forma colaborativa, divulga dados compartilhados a respeito das posições dos ônibus. 
-- **Diferente** de Suposições baseadas nos dados abertos que não são precisos, ou no costume que nem sempre se materializa na pratica especialmente frente a mudanças contínuas no trafego. 
+- **Para** Usuários de transporte público.
+- **que** Queiram pegar um ônibus em uma parada ou terminal.
+- **O** Webapp Busine.me
+- **que** De forma colaborativa, divulga dados compartilhados a respeito das posições dos ônibus.
+- **Diferente** de Suposições baseadas nos dados abertos que não são precisos, ou no costume que nem sempre se materializa na pratica especialmente frente a mudanças contínuas no trafego.
 - **Nosso** produto Oferece informações mais confiaveis sobre as linhas.
 
 ]
@@ -216,13 +218,13 @@ layout: false
 
 template: inverse
 
-## Escopo
+# Escopo
 ---
 layout: false
 .left-column[
   ## Linguagens e Ferramentas
 ]
-.right-column[ 
+.right-column[
 
 <!-- inseriri figuras -->
 
@@ -442,7 +444,7 @@ layout: false
   ## Ambientes
   ## Treinamento
   ## Riscos
-  
+
 ]
 .right-column[
 # Tabelas de Riscos
@@ -460,7 +462,7 @@ layout: false
   ## Ambientes
   ## Treinamento
   ## Riscos
-  
+
 ]
 .right-column[
 # Tabela de Riscos 2
@@ -602,14 +604,14 @@ layout: false
 .right-column[
 ## Exemplo
 
-### Cadastrar usuário com Username já existente 
-- Descrição: O usuário tenta inserir um Username já existente 
-- Pré Condição: 
-  - Não Estar cadastrado no sistema 
-  - Preencher o campo Username com um nome previamente cadastrado 
-- Pós Condição: 
-  - Não efetuação do cadastro Mensagem de alerta: “O nome de usuario escolhido ja esta em uso” 
-- Retorno à página de Cadastro Dados Necessários: 
+### Cadastrar usuário com Username já existente
+- Descrição: O usuário tenta inserir um Username já existente
+- Pré Condição:
+  - Não Estar cadastrado no sistema
+  - Preencher o campo Username com um nome previamente cadastrado
+- Pós Condição:
+  - Não efetuação do cadastro Mensagem de alerta: “O nome de usuario escolhido ja esta em uso”
+- Retorno à página de Cadastro Dados Necessários:
   - Username
 ]
 ---
@@ -623,7 +625,7 @@ layout: false
 .right-column[
 ## Exemplo
 
-### Cadastrar usuário com Username já existente 
+### Cadastrar usuário com Username já existente
 
 <!-- Inserir Figura -->
 
@@ -709,7 +711,7 @@ layout: false
  <video width="600" height="400" autoplay loop>
   <source src="gource.mp4" type="video/mp4">
   Your browser does not support the video tag.
-</video> 
+</video>
 
 .footnote[[Obrigado!](http://BusinemeWeb.cloudapp.net)]
 
@@ -719,7 +721,7 @@ layout: false
 name: last-page
 template: inverse
 
-## Perguntas?
+# Perguntas?
 
     </textarea>
     <script type="text/javascript">
